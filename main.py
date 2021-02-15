@@ -10,7 +10,7 @@ import torch
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-seed = 3
+seed = 0
 
 torch.manual_seed(seed)
 np.random.seed(seed)
