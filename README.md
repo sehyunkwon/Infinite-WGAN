@@ -1,12 +1,13 @@
 <h1 align="center"><b>Infinite WGAN</b></h1>
 <h3 align="center"><b>WGAN with an Infinitely Wide Width Generator has No Spurious Stationary Points</b></h1>
 <p align="center">
-  <i>~ in Pytorch ~</i>
 </p> 
  
 --------------
 
 <br>
+
+WGAN with a 2-layer generator and a 2-layer discriminator both with random features and sigmoidal activation functions and with the width of the generator (but not the discriminator) being large or infinite has **no spurious stationary points** when trained with stochastic gradient ascent-descent. 
 
 ## Requirements
 Please check `requirements.txt`.
