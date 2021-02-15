@@ -17,5 +17,5 @@ and we set `--Ng` to 10000, and `--batch_size` to 10000 due to the limited GPU m
 In a GPU with larger memory, you can try larger `--Ng` as well as larger `--batch_size`.
 
 After the training, generated samples, true samples and loss values are stored in results folder in csv format.
-One can visualize the KDE plot of true and generated samples, as well as the loss plot using plotting.ipynb.
+One can visualize the KDE plot of true and generated samples, as well as the loss plot using `plotting.ipynb`.
 
