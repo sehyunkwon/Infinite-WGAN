@@ -1,6 +1,10 @@
+import os
+import sys
+
+sys.path.append('{}/src'.format(os.getcwd()))
+
 import argparse
 import numpy as np
-import os
 import torch
 
 from args import get_default_opt
