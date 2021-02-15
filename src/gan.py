@@ -12,10 +12,6 @@ from visualization import plot_samples, plot_kde_samples
 
 class InfiniteGAN():
     def __init__(self, opt, fname):
-        torch.manual_seed(opt.seed)
-        np.random.seed(opt.seed)
-        self.seed = opt.seed
-
         self.fname = fname
         self.batch_size = opt.batch_size
         self.latent_dim = opt.latent_dim
@@ -58,7 +54,6 @@ class InfiniteGAN():
         return Jtheta
 
     def train(self):
-        print('seed number is: ', self.seed)
         start = time.time()
         pbar = tqdm.tqdm(range(self.epochs))
 

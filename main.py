@@ -7,6 +7,15 @@ import argparse
 import numpy as np
 import torch
 
+torch.backends.cudnn.benchmark = False
+torch.backends.cudnn.deterministic = True
+
+seed = 3
+
+torch.manual_seed(seed)
+np.random.seed(seed)
+torch.cuda.manual_seed_all(seed)
+
 from args import get_default_opt
 from utils import get_W_D_and_b_D
 from wrapper import wrapper
@@ -25,30 +34,30 @@ if __name__ == "__main__":
 
     Nd = 1000
 
-    # ################### for 8 modes ###################
-    num_locs = 8
-    rt2 = np.sqrt(2)
-    means = torch.Tensor(np.array([[1., 1.], [1., -1.], [-1., -1.], [-1., 1.], [rt2, 0.], [-rt2, 0.],
-                                   [0., -rt2], [0., rt2]]))
-    covs = torch.Tensor(0.01 * np.array(num_locs*[np.eye(2)]))
-    scatter_lim = 4  # it will be used to generate psi' (a_j and b_j)
-    plot_lim = 4  # decide plotting area
-    W_D, b_D = get_W_D_and_b_D(Nd, scatter_lim)
-    Ng = 5000
-    G_lr = 1e-5
-    scale_theta = 5e-3
-
-    # ################### for 9 modes ###################
-    # num_locs = 9
-    # means = torch.Tensor(np.array([[1., 1.], [1., 0.], [1., -1.], [0., 1.], [0., 0.], [0., -1.],
-    #                                [-1., 1.], [-1., 0.], [-1., -1.]]))
+    # ##################### for 8 modes ###################
+    # num_locs = 8
+    # rt2 = np.sqrt(2)
+    # means = torch.Tensor(np.array([[1., 1.], [1., -1.], [-1., -1.], [-1., 1.], [rt2, 0.], [-rt2, 0.],
+    #                                [0., -rt2], [0., rt2]]))
     # covs = torch.Tensor(0.01 * np.array(num_locs*[np.eye(2)]))
     # scatter_lim = 4  # it will be used to generate psi' (a_j and b_j)
     # plot_lim = 4  # decide plotting area
     # W_D, b_D = get_W_D_and_b_D(Nd, scatter_lim)
-    # Ng = 10000
-    # G_lr = 5e-6
-    # scale_theta = 3e-3
+    # Ng = 5000
+    # G_lr = 1e-5
+    # scale_theta = 5e-3
+
+    ################### for 9 modes ###################
+    num_locs = 9
+    means = torch.Tensor(np.array([[1., 1.], [1., 0.], [1., -1.], [0., 1.], [0., 0.], [0., -1.],
+                                   [-1., 1.], [-1., 0.], [-1., -1.]]))
+    covs = torch.Tensor(0.01 * np.array(num_locs*[np.eye(2)]))
+    scatter_lim = 4  # it will be used to generate psi' (a_j and b_j)
+    plot_lim = 4  # decide plotting area
+    W_D, b_D = get_W_D_and_b_D(Nd, scatter_lim)
+    Ng = 10000
+    G_lr = 5e-6
+    scale_theta = 3e-3
 
     # ################### for spiral ###################
     # num_locs = 20
@@ -64,8 +73,7 @@ if __name__ == "__main__":
     # G_lr = 1e-6
     # scale_theta = 3e-3
 
-    input_dict = {"seed": 0,  # seed
-                  "data_dim": 2,  # dimension of data
+    input_dict = {"data_dim": 2,  # dimension of data
                   "Nd": Nd,  # width of the discriminator
                   "Ng": Ng,  # width of the generator
                   "latent_dim": 2,  # dimension of latent variable (should be larger than data_dim)

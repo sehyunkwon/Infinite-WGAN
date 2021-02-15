@@ -5,7 +5,6 @@ import torch
 def get_default_opt(parser):
     ''' Get default arguments
     '''
-    parser.add_argument("--seed", type=int, default=0, help="seed")
     parser.add_argument("--data_dim", type=int, default=2, help="dimension of data")
     parser.add_argument("--Ng", type=int, default=10000, help="width of the generator")
     parser.add_argument("--Nd", type=int, default=10, help="width of the discriminator")
