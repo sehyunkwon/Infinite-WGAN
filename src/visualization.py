@@ -55,7 +55,7 @@ def plot_kde_samples(samples, fname, plot_lim=4):
 
 def plot_statistics(fname):
     fig, ax1 = plt.subplots()
-    df = pd.read_csv(f"{fname}.csv")
+    df = pd.read_csv(f"{fname}_loss.csv")
 
     ax1.set(xlabel='', xticks=[], ylabel='Jtheta')
 

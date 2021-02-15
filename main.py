@@ -1,5 +1,5 @@
-import os
 import sys
+import os
 
 sys.path.append('{}/src'.format(os.getcwd()))
 

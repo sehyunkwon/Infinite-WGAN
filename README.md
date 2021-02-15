@@ -1,4 +1,4 @@
-# infinite_WGAN
+# infinite_gan
 
 ## Requirements
 Please check `requirements.txt`.

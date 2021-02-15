@@ -129,7 +129,7 @@ class InfiniteGAN():
         return np.vstack(generated_list)
 
     def write_csv(self):
-        csv_fname = f'{self.fname}.csv'
+        csv_fname = f'{self.fname}_loss.csv'
         df = pd.DataFrame({'Jtheta': self.Jtheta_list,
                            'loss_D': self.loss_D_list,
                            })
