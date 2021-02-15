@@ -1,5 +1,12 @@
-# Infinite_WGAN
+<h1 align="center"><b>Infinite WGAN</b></h1>
+<h3 align="center"><b>WGAN with an Infinitely Wide Width Generator has No Spurious Stationary Points</b></h1>
+<p align="center">
+  <i>~ in Pytorch ~</i>
+</p> 
+ 
+--------------
 
+<br>
 ## Requirements
 Please check `requirements.txt`.
 
