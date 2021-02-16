@@ -1,5 +1,5 @@
 <h1 align="center"><b>Infinite WGAN</b></h1>
-<h3 align="center"><b>WGAN with an Infinitely Wide Width Generator has No Spurious Stationary Points</b></h1>
+<h3 align="center"><b>WGAN with an Infinitely Wide Generator has No Spurious Stationary Points</b></h1>
 <p align="center">
 </p> 
  
