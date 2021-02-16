@@ -7,7 +7,7 @@
 
 <br>
 
-WGAN with a 2-layer generator and a 2-layer discriminator both with random features and sigmoidal activation functions and with the width of the generator (but not the discriminator) being large or infinite has **no spurious stationary points** when trained with stochastic gradient ascent-descent. This repo provides the code for 8-modes, 9-modes and spiral-like GMMs experiments in large width generator case.
+WGAN with a 2-layer generator and a 2-layer discriminator both with random features and sigmoidal activation functions and with the width of the generator (but not the discriminator) being large or infinite has **no spurious stationary points** when trained with stochastic gradient ascent-descent. This repo provides the code for 8-modes, 9-modes and spiral-like GMMs experiments in large width generator case. preprint is \url{https://arxiv.org/abs/2102.07541}
 
 ## Requirements
 Please check `requirements.txt`.
