@@ -11,7 +11,6 @@ This is an repository for [WGAN with an Infinitely Wide Generator Has No Spuriou
 
 <p align="center">
 <img src="thumnail.png" width="600" height="400">
- <\p>
 
 ## Requirements
 Please check `requirements.txt`.
