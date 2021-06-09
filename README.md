@@ -9,7 +9,7 @@
 
 This is an repository for [WGAN with an Infinitely Wide Generator Has No Spurious Stationary Points](https://arxiv.org/abs/2102.07541). WGAN with a 2-layer generator and a 2-layer discriminator both with random features and sigmoidal activation functions and with the width of the generator (but not the discriminator) being large or infinite has **no spurious stationary points** when trained with stochastic gradient ascent-descent. This repo provides the code for 8-modes, 9-modes and spiral-like GMMs experiments in large width generator case.
 
-![thumnail](https://user-images.githubusercontent.com/66566004/121286359-ac2e9a00-c91a-11eb-9f1f-afa9ad9e0dae.png)
+<p align="center"> ![thumnail](https://user-images.githubusercontent.com/66566004/121286359-ac2e9a00-c91a-11eb-9f1f-afa9ad9e0dae.png)
 
 
 ## Requirements
